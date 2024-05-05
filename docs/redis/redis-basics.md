@@ -4,7 +4,7 @@ title: Redis Basics
 nav_order: 3
 parent: Redis
 ---
-
+ 
  * netflix redis, memcached
    * dynomite is using twemproxy (https://github.com/twitter/twemproxy).
 
