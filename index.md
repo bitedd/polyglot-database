@@ -3,33 +3,49 @@ title: Home
 layout: home
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# Migration Tools
+DB 스키마 관리, 마이그레이션 관련 소프트웨어를 정리한다.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+# Flyway
+rdb database migration
 
-More specifically, the created site:
+Spring 에서 db schema 관리를 해주는 툴
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+* 만약에 flyway와 ddl-auto: true가 동시에 적용되있으면, flyway가 먼저 동작하는 걸 확인함.
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+# Liquidate
+KeyCloack이 사용하고 있는 migration tool
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
-To get started with creating a site, simply:
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+# Bad Relational Database
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+* 배너 정보를 저장하는 테이블 스키마를 고민하다가 든 생각
+mongodb가 많이 사용되는 유스케이스를 살펴보자. json 형태로 데이터를 free하게 세팅할 수 있을거 같다. 하지만, 만약에 mongodb도 스키마 세팅을 해야지 사용해야하는 Feature가 있지않은가? ElasticSearch 같은 경우는 Schema를 세팅해야지 사용할 수 있는 기능이 많았던거 같다.
 
-----
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+# Sharding RDB
+[우아한형제들 DB분산처리를 위한 sharding](https://techblog.woowahan.com/2687/)
+ 
+=> Spring을 활용한 현실적인 가이드
+ 
+ 
+ 
+[실무에서 DB를 샤딩할 때 주로 어떤 DB를 사용하나요?](https://okky.kr/articles/1313183)
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+=> MySQL보다 MongoDB???
+ 
+
+
+### vitess
+https://vitess.io/
+  
+youtube에서 사용하는 오픈소스 솔루션
+ 
+ 
+ 
+### shardingsphere
+https://shardingsphere.apache.org/ 
+ 
+아파치에서 개발하는 오픈 소스 
+
