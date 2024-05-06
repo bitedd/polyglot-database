@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Overview
+title: Data Types
 nav_order: 1
 parent: MySQL
 ---
