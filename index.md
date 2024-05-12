@@ -17,6 +17,16 @@ Spring 에서 db schema 관리를 해주는 툴
 KeyCloack이 사용하고 있는 migration tool
 
 
+# Columnar Database
+* 대량의 데이터를 이용하는 경우에 사용하게 된다.
+* 조회 성능이 탁월하고, 
+* 업데이트 성능은 낮은 특성을 가진다.
+
+* 데이터 분석시에 매우 유용하다.
+
+* 많이 사용되는 사례로 채팅 메세지를 저장하는 용도로 사용된다.
+  + 예. Discord
+
 
 # Bad Relational Database
 
